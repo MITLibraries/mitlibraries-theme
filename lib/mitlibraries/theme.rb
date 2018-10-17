@@ -2,6 +2,9 @@ require 'mitlibraries/theme/version'
 
 module Mitlibraries
   module Theme
-    # Your code goes here...
+    module Rails
+      class Engine < ::Rails::Engine
+      end
+    end
   end
 end
