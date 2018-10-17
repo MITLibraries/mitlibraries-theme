@@ -1,8 +1,6 @@
 # Mitlibraries::Theme
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mitlibraries/theme`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Provides base CSS and Images used by MIT Libraries for our websites.
 
 ## Installation
 
@@ -22,7 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After you bundle, delete your application local `app/views/layouts/application.rb` to use the layout the gem provides.
+
+Rename your `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and remove anything like:
+```
+*= require_tree .
+*= require_self
+```
+Add
+`@import "libraries-main";`
+
+If you have local overrides for styles, import them _after_ the shared styles.
+
+You'll want to set `<%= content_for(:title, "SOMETHING") %>` on your views.
+
+You'll want to copy `app/views/layouts/_site_nav.html.erb` into your local repo and make appropriate changes.
+
+If you need to make changes to other templates, you can also copy those to your local repo but you should check with others as the main header / footer / etc are probably best left as they are in this gem.
 
 ## Development
 
@@ -32,7 +46,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mitlibraries-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/MITLibraries/mitlibraries-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +54,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Mitlibraries::Theme project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/mitlibraries-theme/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Mitlibraries::Theme project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/MITLibraries/mitlibraries-theme/blob/master/CODE_OF_CONDUCT.md).
