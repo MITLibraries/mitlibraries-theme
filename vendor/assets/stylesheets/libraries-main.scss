@@ -1,0 +1,17 @@
+// ------------------------------
+// MIT Libraries Build Compile - LTR
+// this compile makes a plain base css that includes everything for
+// header, footer, and basic content styling across apps
+
+// +Get the core styles
+// ====================
+@import 'core';
+
+// +Select styles that need js
+@import 'js-elements/expand-collapse';
+
+// TODO - split this into a separate compile
+// app specific styles
+// ====================
+//@import 'apps/ebooks';
+//@import 'apps/quicksubmit';
