@@ -38,6 +38,21 @@ You'll want to copy `app/views/layouts/_site_nav.html.erb` into your local repo 
 
 If you need to make changes to other templates, you can also copy those to your local repo but you should check with others as the main header / footer / etc are probably best left as they are in this gem.
 
+## Adding Additional JavaScript to HTML Head
+
+You can load additional js to individual pages using:
+
+```
+<% content_for :additional_js do %>
+  <script>alert("hi");</script>
+<% end %>
+```
+
+This can appear as many times as you need on as many templates as you need. If
+called multiple times the results are concatenated. This is intended primarily
+for adding external support libraries. For JS you are writing, include via
+`application.scss` as normal.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

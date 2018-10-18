@@ -18,6 +18,9 @@
 
 <%= render partial: "layouts/js_exception_handler" %>
 <%= javascript_include_tag "application" %>
+
+<%= yield :additional_js %>
+
 <% if (ENV['GOOGLE_ANALYTICS']) %>
 <script type="text/javascript">
   // Google Analytics
