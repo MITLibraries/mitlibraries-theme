@@ -11,6 +11,7 @@
       <%= render partial: "layouts/global_alert" %>
 
       <%= render partial: "layouts/site_header" %>
+
       <%= render partial: "layouts/site_nav" %>
 
       <div class="wrap-outer-content layout-band">
@@ -20,6 +21,7 @@
 
             <%= yield %>
 
+            <%= render partial: "layouts/site_footer" %>
           </main>
           <!-- close content-main -->
         </div>
@@ -28,7 +30,7 @@
       <script src="https://use.fontawesome.com/38304317ff.js"></script>
 
       <footer>
-        <%= render partial: "layouts/site_footer" %>
+        <%= render partial: "layouts/libraries_footer" %>
         <%= render partial: "layouts/institute_footer" %>
       </footer>
     </div>

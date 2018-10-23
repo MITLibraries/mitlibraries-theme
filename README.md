@@ -34,9 +34,28 @@ If you have local overrides for styles, import them _after_ the shared styles.
 
 You'll want to set `<%= content_for(:title, "SOMETHING") %>` on your views.
 
-You'll want to copy `app/views/layouts/_site_nav.html.erb` into your local repo and make appropriate changes.
+You'll want to copy `app/views/layouts/_site_nav.html.erb` into your local
+repo and make appropriate changes.
+
+`app/views/layouts/_site_footer.html.erb` is also available if you really need
+a third footer above the other two (I'm looking at you bento!).
 
 If you need to make changes to other templates, you can also copy those to your local repo but you should check with others as the main header / footer / etc are probably best left as they are in this gem.
+
+## Adding Additional JavaScript to HTML Head
+
+You can load additional js to individual pages using:
+
+```
+<% content_for :additional_js do %>
+  <script>alert("hi");</script>
+<% end %>
+```
+
+This can appear as many times as you need on as many templates as you need. If
+called multiple times the results are concatenated. This is intended primarily
+for adding external support libraries. For JS you are writing, include via
+`application.scss` as normal.
 
 ## Development
 
