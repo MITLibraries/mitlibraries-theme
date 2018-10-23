@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_dependency 'rails'
-  spec.add_dependency 'sass'
-  spec.add_dependency 'sass-rails'
+  spec.add_dependency 'rails', '~> 5'
+  spec.add_dependency 'sass', '~> 3.4'
+  spec.add_dependency 'sass-rails', '~> 5'
 end
