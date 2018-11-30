@@ -57,6 +57,20 @@ called multiple times the results are concatenated. This is intended primarily
 for adding external support libraries. For JS you are writing, include via
 `application.scss` as normal.
 
+## Adding Additional Meta headers to HTML Head
+
+You can load additional meta headers to individual pages using:
+
+```
+<% content_for :additional_meta_tag do %>
+  <meta name="description" content="Words and stuff about stuff or something.">
+  <meta name="keywords" content="words,stuff,yoyos">
+<% end %>
+```
+
+This can appear as many times as you need on as many templates as you need. If
+called multiple times the results are concatenated.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
