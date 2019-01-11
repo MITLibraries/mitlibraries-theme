@@ -21,6 +21,8 @@
 <%= render partial: "layouts/js_exception_handler" %>
 <%= javascript_include_tag "application" %>
 
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+
 <%= yield :additional_js %>
 
 <% if (ENV['GOOGLE_ANALYTICS']) %>
