@@ -25,6 +25,14 @@ update: fetch ## Synchronize latest (auto runs clean and fetch first)
 	cp -R tmp/mitlib-style-master/_assets/i/* vendor/assets/images
 	cp -R tmp/mitlib-style-master/_assets/sass/* vendor/assets/stylesheets
 
+	rm -rf vendor/assets/stylesheets/apps/
+	rm -f vendor/assets/stylesheets/ebooks-main.scss
+	rm -f vendor/assets/stylesheets/guide-helper.scss
+	rm -f vendor/assets/stylesheets/quicksubmit.sass
+
+	# We need to double $ so make doesn't think it's a variable and escape the $ for bash. Hence \$$.
+	sed -i '' "s+url('#{\$$image-path}/vi-shape7-tp.svg')+image-url('vi-shape7-tp.svg')+g" vendor/assets/stylesheets/elements/*.scss
+
 	@tput setaf 2
 	@tput bold
 	@echo "Assets updated. Make sure to update version in:"
@@ -41,7 +49,7 @@ dist: ## Build the gem from the current gemspec
 	@tput setaf 2
 	@tput bold
 	@echo "Finished building gem. To test locally add to your project Gemfile:"
-	@echo "  gem 'mitlibraries-theme', '$(shell pwd)'"
+	@echo "  gem 'mitlibraries-theme', path: '$(shell pwd)'"
 	@tput sgr0
 
 publish: ## Publish the gem version defined in the gemspec
