@@ -12,21 +12,27 @@ gem 'mitlibraries-theme'
 
 And then execute:
 
-    $ bundle
+```shell
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install mitlibraries-theme
+```shell
+$ gem install mitlibraries-theme
+```
 
 ## Usage
 
 After you bundle, delete your application local `app/views/layouts/application.rb` to use the layout the gem provides.
 
 Rename your `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and remove anything like:
-```
+
+```ruby
 *= require_tree .
 *= require_self
 ```
+
 Add
 `@import "libraries-main";`
 
@@ -46,7 +52,7 @@ If you need to make changes to other templates, you can also copy those to your 
 
 You can load additional js to individual pages using:
 
-```
+```ruby
 <% content_for :additional_js do %>
   <script>alert("hi");</script>
 <% end %>
@@ -61,7 +67,7 @@ for adding external support libraries. For JS you are writing, include via
 
 You can load additional meta headers to individual pages using:
 
-```
+```ruby
 <% content_for :additional_meta_tag do %>
   <meta name="description" content="Words and stuff about stuff or something.">
   <meta name="keywords" content="words,stuff,yoyos">
@@ -81,6 +87,7 @@ Run `make help` for details.
 
 If your goal is to fetch the latest assets from the style repo and publish the
 changes, this would get you there:
+
 - `make update`
 - manually update the version in `lib/mitlibraries/theme/version.rb`
 - `make dist`
