@@ -1,0 +1,187 @@
+// modules and other reusable bits
+
+.box-content {
+  border: 1px solid $gray-l3;
+  background-color: $white-t;
+  padding: 3%;
+}
+
+.bit {
+  margin: 0 0 3rem 0;
+  border-top: 3px solid $gray-l2;
+  padding-top: 1rem;
+  font-size: $fs-small;
+
+  .title {
+    @extend .hd-5;
+  }
+
+  ul {
+    @extend .list-unbulleted;
+  }
+}
+
+// global app style alerts and notices 
+
+.alert {
+
+  p {
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+  }
+
+  &.info {
+    color: $black;
+  }
+
+  &.success {
+    color: $success;
+  }
+
+  &.warning {
+    color: $warning;
+  }
+
+  &.error {
+    color: $error;
+  }
+}
+
+.wrap-notices {
+  background-color: $gray-d1;
+  color: $white;
+  font-size: $fs-xsmall;
+
+  a {
+    color: $brand-primary2;
+  }
+
+  &.info {
+  }
+
+  &.success {
+    border-bottom: 4px solid $success;
+  }
+
+  &.warning {
+    border-bottom: 4px solid $warning;
+  }
+
+  &.error {
+    border-bottom: 4px solid $error;
+  }
+}
+
+.alert-banner {
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  padding: 1.6rem 2rem;
+  border: 1px solid $brand-primary;
+  border-top: 5px solid $brand-primary;
+  color: $black-t;
+  font-weight: $fw-bold;
+
+  .fa {
+    display: inline-block;
+    margin-right: .5em;
+  }
+
+  &.success {
+    border: 1px solid $success;
+    border-top: 3px solid $success;
+    color: $black-t;
+  }
+
+  &.warning {
+    border: 1px solid $warning;
+    border-top: 5px solid $warning;
+    color: $black-t;
+  }
+
+  &.error {
+    border: 1px solid $error;
+    border-top: 5px solid $error;
+    color: $black-t;
+  }
+
+  &.privacy-notice {
+    position: fixed;
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    p {
+      margin-right: .5em;
+    }
+  }
+}
+
+.inline-action {
+
+  @media (min-width: $bp-screen-md) {
+
+    .message {
+      display: inline-block;
+      vertical-align: middle;
+      width: 65%
+    }
+
+    .actions {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34%;
+      text-align: right;
+    }
+  }
+}
+
+.well {
+  margin: 2rem 0;
+  background-color: $wisp;
+  box-shadow: inset 0 0 5px $shadow;
+  padding: 2rem 2.5rem;
+}
+
+.panel {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 1px solid $gray-l2;
+  background-color: $white;
+  border-top: 4px solid $brand-primary;
+
+  .panel-heading {
+    @extend .copy-lead;
+    margin: 1.5rem 2rem .5rem 2rem;
+  }
+
+  .panel-body {
+    margin: .5rem 2rem 1.5rem 2rem;
+  }
+
+  .panel-footer {
+    font-size: $fs-small;
+    border-top: 1px solid $gray-l2;
+    background-color: $wisp;
+    padding: 1rem 2rem;
+  }
+
+  &.panel-info {
+    border-top: 4px solid $brand-primary;
+  }
+
+  &.panel-success {
+    border-top: 4px solid $success;
+  }
+
+  &.panel-warning {
+    border-top: 4px solid $warning;
+  }
+
+  &.panel-danger {
+    border-top: 4px solid $error;
+  }
+}

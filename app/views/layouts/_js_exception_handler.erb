@@ -1,0 +1,14 @@
+<% if ENV['JS_EXCEPTION_LOGGER_KEY'].present? %>
+  <script
+    src="https://browser.sentry-cdn.com/6.13.3/bundle.min.js"
+    integrity="sha384-sGMbmxgVprpEFMz6afNDyADd4Kav86v5Tvo2Y6w5t8tHUn1P1at3lCjN7IQo2c7E"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    Sentry.init({
+      dsn: <%= ENV['JS_EXCEPTION_LOGGER_KEY'] %>,
+      maxBreadcrumbs: 50,
+    });
+  </script>
+<% end %>
