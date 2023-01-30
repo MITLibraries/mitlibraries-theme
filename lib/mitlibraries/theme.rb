@@ -1,11 +1,8 @@
 require 'mitlibraries/theme/version'
+require 'mitlibraries/theme/engine'
 
 module Mitlibraries
   module Theme
-    module Rails
-      class Engine < ::Rails::Engine
-        config.assets.precompile += %w[favicon.ico mitlib-wordmark.svg]
-      end
-    end
+    # The precompilation step that used to be here has been moved to engine.rb.
   end
 end

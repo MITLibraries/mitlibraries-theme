@@ -1,28 +1,29 @@
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mitlibraries/theme/version'
+require_relative "lib/mitlibraries/theme/version"
 
 Gem::Specification.new do |spec|
   spec.name          = 'mitlibraries-theme'
   spec.version       = Mitlibraries::Theme::VERSION
   spec.authors       = ['Jeremy Prevost']
   spec.email         = ['jprevost@mit.edu']
-
   spec.summary       = 'General theme for MIT Libraries Rails apps'
   spec.homepage      = 'https://github.com/MITLibraries/mitlibraries-theme'
   spec.license       = 'MIT'
+  
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
-  spec.files = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/MITLibraries/mitlibraries-theme"
+  spec.metadata["changelog_uri"] = "https://github.com/MITLibraries/mitlibraries-theme/releases"
+
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
+    Dir["{app,config,db,lib}/**/*", "LICENSE.txt", "Rakefile", "README.md"]
   end
 
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
-
-  spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'minitest', '~> 5.0'
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_dependency 'rails', '>= 5', '< 8'
-  spec.add_dependency 'sassc', '~> 2'
+  spec.add_development_dependency 'debug', '~> 1'
+  spec.add_development_dependency 'simplecov', '~> 0'
+  spec.add_development_dependency 'simplecov-lcov', '~> 0'
+  spec.add_dependency 'rails', '>= 6', '< 8'
+  spec.add_dependency 'sassc-rails', '~> 2'
 end

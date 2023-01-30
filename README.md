@@ -24,7 +24,19 @@ $ gem install mitlibraries-theme
 
 ## Usage
 
-After you bundle, delete your application local `app/views/layouts/application.rb` to use the layout the gem provides.
+### Controllers
+
+The gem includes a link helper class, which provides a function - `nav_link_to` - which renders links with particular classes and ARIA roles that are suited for site navigation. The default navigation partial at `app/views/layouts/_site_nav.html.erb` makes use of this function, and we recommend you copy this partial into your application with appropriate updates for your app.
+
+In order to make this function available to your application, please add the following line near the top of your local `app/controllers/application_controller.rb`:
+
+```ruby
+helper Mitlibraries::Theme::Engine.helpers
+```
+
+### Layouts and stylesheets
+
+After you update your controller and bundle, delete your application local `app/views/layouts/application.rb` to use the layout the gem provides.
 
 Rename your `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and remove anything like:
 

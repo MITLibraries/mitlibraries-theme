@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><%= content_for?(:title) ? yield(:title) : "  MIT Libraries" %></title>
 <%= csrf_meta_tags %>
+<%= csp_meta_tag %>
 
 <%= yield :additional_meta_tag %>
 

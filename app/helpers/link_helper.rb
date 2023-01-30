@@ -1,4 +1,6 @@
 module LinkHelper
+  extend self
+
   # helper wrapper around link_to that inserts visual and screen reader info
   # for navigation links
   def nav_link_to(name, url)
