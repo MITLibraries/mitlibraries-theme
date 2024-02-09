@@ -7,6 +7,9 @@
             <span class="sr">MIT Libraries home</span>
             <img src="https://cdn.libraries.mit.edu/files/branding/local/mitlib-wordmark.svg" height="35" alt="MIT Libraries logo">
           </a>
+          <% if ENV['PLATFORM_NAME'] %>
+            <a href="/" class="platform-name"><%= ENV.fetch('PLATFORM_NAME') %></a>
+          <% end %>
         </h1>
       </div>
       <div class="wrap-header-supp">

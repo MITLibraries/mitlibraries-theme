@@ -40,6 +40,21 @@
     }
   }
 
+  .platform-name {
+    color: #fff;
+    font-size: 2.8rem;
+    text-decoration: none;
+    vertical-align: middle;
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
+    margin-left: 2rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
   .link-logo-mit {
     color: $white;
 
@@ -50,6 +65,21 @@
         fill: $white;
       }
     }
+  }
+}
+
+@media (max-width: $bp-screen-md) {
+  .wrap-header {
+    .platform-name {
+      border-left: none;
+      padding: 0;
+      margin: 2rem 0 0 0;
+      display: block;
+    }
+  }
+  
+  .wrap-header-supp {
+    vertical-align: top;
   }
 }
 
