@@ -58,6 +58,9 @@ repo and make appropriate changes.
 `app/views/layouts/_site_footer.html.erb` is also available if you really need
 a third footer above the other two (I'm looking at you bento!).
 
+`app/views/layouts/_skip_links.html.erb` provides the option to change the href or text for the skip link, or include
+multiple skip links if needed.
+
 If you need to make changes to other templates, you can also copy those to your local repo but you should check with others as the main header / footer / etc are probably best left as they are in this gem.
 
 ## Adding Additional JavaScript to HTML Head
