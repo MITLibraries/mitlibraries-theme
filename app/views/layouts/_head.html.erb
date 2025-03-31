@@ -7,8 +7,8 @@
 
 <%= yield :additional_meta_tag %>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,latin-ext" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" integrity="sha512-4oJiHyX3IWAdU3YotQW0piF3VIAU+vzoBYFoBj8fEzqXK9e9N3GUUvgRAgrQxDmtWnbwzZ27BD85R7oQEag55Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,latin-ext" integrity="sha512-bbxuNDhTy0hsTCnMdxZhzV9XM4aycXp/lSfDCW+VjsQehtF0G0laDWagWm4uPBNC4OD2Lf4cF4zeeCbORQaCQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <%= stylesheet_link_tag "application", :media => "all" %>
 
 <link rel="icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/favicon.ico" sizes="32x32">
@@ -19,7 +19,7 @@
 <%= render partial: "layouts/js_exception_handler" %>
 <%= javascript_include_tag "application" %>
 
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <%= yield :additional_js %>
 
