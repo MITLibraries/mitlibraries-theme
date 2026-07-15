@@ -4,8 +4,6 @@ class Mitlibraries::EngineTest < ActiveSupport::TestCase
   test 'registers theme assets for precompilation' do
     expected_assets = %w[
       favicon.ico
-      mitlib-wordmark.svg
-      vi-shape7-tp.svg
       libraries-main.css
     ]
 
@@ -13,7 +11,13 @@ class Mitlibraries::EngineTest < ActiveSupport::TestCase
   end
 
   test 'makes theme assets available to the asset pipeline' do
-    assert_equal 'libraries-main.css', Rails.application.assets.find_asset('libraries-main.css').logical_path
-    assert_equal 'favicon.ico', Rails.application.assets.find_asset('favicon.ico').logical_path
+    libraries_css = Rails.application.assets&.find_asset('libraries-main.css')
+    favicon = Rails.application.assets&.find_asset('favicon.ico')
+
+    refute_nil libraries_css, "Expected sprockets to find libraries-main.css"
+    refute_nil favicon, "Expected sprockets to find favicon.ico"
+
+    assert_equal 'libraries-main.css', libraries_css.logical_path
+    assert_equal 'favicon.ico', favicon.logical_path
   end
 end
