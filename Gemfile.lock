@@ -98,6 +98,7 @@ GEM
     erubi (1.13.1)
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-darwin)
+    ffi (1.17.4-x86_64-linux-gnu)
     globalid (1.4.0)
       activesupport (>= 6.1)
     i18n (1.15.2)
@@ -137,6 +138,8 @@ GEM
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     pp (0.6.4)
       prettyprint
@@ -217,8 +220,9 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.8.1-arm64-darwin)
-    sqlite3 (2.8.1-x86_64-darwin)
+    sqlite3 (2.9.5-arm64-darwin)
+    sqlite3 (2.9.5-x86_64-darwin)
+    sqlite3 (2.9.5-x86_64-linux-gnu)
     thor (1.5.0)
     tilt (2.8.0)
     timeout (0.6.1)
@@ -237,6 +241,7 @@ PLATFORMS
   arm64-darwin-25
   x86_64-darwin-19
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   debug (~> 1)
