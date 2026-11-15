@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_development_dependency 'debug', '~> 1'
-  spec.add_development_dependency 'simplecov', '~> 0'
+  spec.add_development_dependency 'simplecov', '~> 1'
   spec.add_development_dependency 'simplecov-lcov', '~> 0'
   spec.add_dependency 'rails', '>= 6', '< 9'
   spec.add_dependency 'sassc-rails', '~> 2'
