@@ -88,6 +88,7 @@ GEM
     connection_pool (3.0.3)
     crass (1.0.8)
     date (3.6.0)
+    docile (1.4.1)
     drb (2.2.3)
     erb (6.0.7)
     erubi (1.13.1)
@@ -191,6 +192,13 @@ GEM
     reline (0.7.0)
       io-console (~> 0.5)
     securerandom (0.4.1)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.2)
+    simplecov-lcov (0.9.0)
+    simplecov_json_formatter (0.1.4)
     thor (1.5.0)
     timeout (0.6.1)
     tsort (0.2.0)
@@ -211,6 +219,8 @@ DEPENDENCIES
   mitlibraries-theme!
   propshaft
   puma
+  simplecov (~> 0)
+  simplecov-lcov (~> 0)
 
 BUNDLED WITH
    2.7.2
