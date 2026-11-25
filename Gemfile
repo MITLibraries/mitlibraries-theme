@@ -1,12 +1,11 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source "https://rubygems.org"
 
-# Specify your gem's dependencies in mitlibraries-theme.gemspec
+# Specify your gem's dependencies in mitlibraries-theme.gemspec.
 gemspec
 
-gem "sqlite3"
+gem "puma"
 
-gem "sprockets-rails"
+gem "propshaft"
 
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
